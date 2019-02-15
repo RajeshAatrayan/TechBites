@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdfdfd"
+    tools:context=".MainActivity">
+
+
+    <ibrickedlabs.com.techbites.VerticalViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/no_internet_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_centerInParent="true"
+       android:id="@+id/noInternetImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:scaleType="center"
+        />
+        <TextView
+            android:layout_below="@id/noInternetImageView"
+            android:text="Ooops! No Internet Connection"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#546E7A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+
+
+    </RelativeLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:indicatorColor="#31c5f4"
+        android:id="@+id/avl_in_main"
+        app:indicatorName="LineScalePulseOutRapidIndicator"
+        />
+
+
+</RelativeLayout>
